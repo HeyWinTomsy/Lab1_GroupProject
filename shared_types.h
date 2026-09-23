@@ -1,4 +1,6 @@
 #pragma once
+
+#include <vector>
 #include <string>
 
 struct InputData
@@ -6,14 +8,20 @@ struct InputData
     double x0;
     double y0;
     double h;
-    int    steps;
+    int steps;
 };
 
 struct Result
 {
-    double value;
+    std::vector<double> xValues;
+    std::vector<double> yValues;
+
+    double finalValue;
     double exactValue;
     double error;
-    int    iterations;
+
+    int iterations;
+    double executionTimeMs;
+
     std::string methodName;
 };
