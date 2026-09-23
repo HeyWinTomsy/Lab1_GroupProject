@@ -2,8 +2,6 @@
 #include <cmath>
 #include "shared_types.h"
 
-std::unique_ptr<Result> calculateB(std::shared_ptr<const InputData> data);
-
 static double f(double x, double y)
 {
     return y / x;
