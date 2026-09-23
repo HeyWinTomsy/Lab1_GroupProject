@@ -3,10 +3,8 @@
 
 struct InputData
 {
-
 };
 
 struct Result
 {
-    // характеристики результату
 };
