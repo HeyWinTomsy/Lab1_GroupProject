@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Lab1_GroupProject (all sources)",
+      "type": "shell",
+      "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "-O2",
+        "main.cpp",
+        "student_a.cpp",
+        "student_b.cpp",
+        "-o",
+        "Lab1_GroupProject.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Compiles the whole project with all required source files."
+    },
+    {
+      "label": "Run Lab1_GroupProject",
+      "type": "shell",
+      "command": "${workspaceFolder}\\Lab1_GroupProject.exe",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": [
+        "Build Lab1_GroupProject (all sources)"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
